@@ -1,79 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
     <style>
-        /* Style the form container */
-        form {
+        /* Style for the form container */
+        .form-container {
             max-width: 400px;
             margin: 0 auto;
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            background-color: #f7f7f7;
+            background-color: #f9f9f9;
         }
 
-        /* Style form labels */
+        /* Style for labels */
         label {
             display: block;
             margin-bottom: 5px;
         }
 
-        /* Style input fields and select */
+        /* Style for input and select fields */
         input[type="text"],
         select,
         textarea {
             width: 100%;
             padding: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 3px;
         }
 
-        /* Style the submit button */
+        /* Style for the submit button */
         input[type="submit"] {
-            background-color: #0073e6;
+            background-color: #007BFF;
             color: #fff;
-            padding: 10px 20px;
             border: none;
+            padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
         }
 
         input[type="submit"]:hover {
-            background-color: #005bbf;
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00D5g00000L8VqO" method="POST">
-        <input type="hidden" name="orgid" value="00D5g00000L8VqO">
-        <input type="hidden" name="retURL" value="http://">
+    <div class="form-container">
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00D5g00000L8VqO" method="POST">
+            <input type="hidden" name="orgid" value="00D5g00000L8VqO">
+            <input type="hidden" name="retURL" value="http://">
 
-        <label for="name">Contact Name</label>
-        <input id="name" maxlength="80" name="name" type="text">
+            <label for="name">Contact Name</label>
+            <input id="name" maxlength="80" name="name" type="text" />
 
-        <label for="state">State</label>
-        <select id="00N5g00000dVRwd" name="00N5g00000dVRwd" title="State">
-            <option value="">--None--</option>
-            <option value="DC">DC</option>
-            <option value="VA">VA</option>
-            <option value="MD">MD</option>
-        </select>
+            <label for="state">State</label>
+            <select id="00N5g00000dVRwd" name="00N5g00000dVRwd" title="State">
+                <option value="">--None--</option>
+                <option value="DC">DC</option>
+                <option value="VA">VA</option>
+                <option value="MD">MD</option>
+            </select>
 
-        <label for="email">Email</label>
-        <input id="email" maxlength="80" name="email" type="text">
+            <label for="email">Email</label>
+            <input id="email" maxlength="80" name="email" type="text" />
 
-        <label for="phone">Phone</label>
-        <input id="phone" maxlength="40" name="phone" type="text">
+            <label for="phone">Phone</label>
+            <input id="phone" maxlength="40" name="phone" type="text" />
 
-        <label for="subject">Subject</label>
-        <input id="subject" maxlength="80" name="subject" type="text">
+            <label for="subject">Subject</label>
+            <input id="subject" maxlength="80" name="subject" type="text" />
 
-        <label for="description">Description</label>
-        <textarea name="description"></textarea>
+            <label for="description">Description</label>
+            <textarea name="description"></textarea>
 
-        <input type="submit" name="submit">
-    </form>
+            <input type="submit" name="submit">
+        </form>
+    </div>
 </body>
 </html>
