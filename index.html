@@ -1,43 +1,79 @@
-<!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
-<!--  If necessary, please modify the charset parameter to specify the        -->
-<!--  character set of your HTML page.                                        -->
-<!--  ----------------------------------------------------------------------  -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <style>
+        /* Style the form container */
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f7f7f7;
+        }
 
-<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+        /* Style form labels */
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
 
-<!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: Please add the following <FORM> element to your page.             -->
-<!--  ----------------------------------------------------------------------  -->
+        /* Style input fields and select */
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
 
-<form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00D5g00000L8VqO" method="POST">
+        /* Style the submit button */
+        input[type="submit"] {
+            background-color: #0073e6;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-<input type=hidden name="orgid" value="00D5g00000L8VqO">
-<input type=hidden name="retURL" value="http://Thank You">
+        input[type="submit"]:hover {
+            background-color: #005bbf;
+        }
+    </style>
+</head>
+<body>
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00D5g00000L8VqO" method="POST">
+        <input type="hidden" name="orgid" value="00D5g00000L8VqO">
+        <input type="hidden" name="retURL" value="http://">
 
-<!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-<!--  these lines if you wish to test in debug mode.                          -->
-<!--  <input type="hidden" name="debug" value=1>                              -->
-<!--  <input type="hidden" name="debugEmail"                                  -->
-<!--  value="ruslan.ai9495@gmail.com">                                        -->
-<!--  ----------------------------------------------------------------------  -->
+        <label for="name">Contact Name</label>
+        <input id="name" maxlength="80" name="name" type="text">
 
-<label for="name">Contact Name</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
+        <label for="state">State</label>
+        <select id="00N5g00000dVRwd" name="00N5g00000dVRwd" title="State">
+            <option value="">--None--</option>
+            <option value="DC">DC</option>
+            <option value="VA">VA</option>
+            <option value="MD">MD</option>
+        </select>
 
-State:<select  id="00N5g00000dVRwd" name="00N5g00000dVRwd" title="State"><option value="">--None--</option><option value="DC">DC</option>
-<option value="VA">VA</option>
-<option value="MD">MD</option>
-</select><br>
+        <label for="email">Email</label>
+        <input id="email" maxlength="80" name="email" type="text">
 
-<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+        <label for="phone">Phone</label>
+        <input id="phone" maxlength="40" name="phone" type="text">
 
-<label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+        <label for="subject">Subject</label>
+        <input id="subject" maxlength="80" name="subject" type="text">
 
-<label for="subject">Subject</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+        <label for="description">Description</label>
+        <textarea name="description"></textarea>
 
-<label for="description">Description</label><textarea name="description"></textarea><br>
-
-<input type="submit" name="submit">
-
-</form>
+        <input type="submit" name="submit">
+    </form>
+</body>
+</html>
