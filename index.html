@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
   <style>
     /* Add CSS styles here */
     body {
@@ -15,30 +17,29 @@
       height: 100vh;
     }
     form {
-      background-color: #ffffff;
-      max-width: 400px;
-      padding: 20px;
+      background-color: #fff;
       border-radius: 8px;
+      padding: 20px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
     }
     label {
       display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
+      margin-bottom: 8px;
     }
     input[type="text"],
     select,
     textarea {
       width: 100%;
       padding: 10px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       border: 1px solid #ccc;
       border-radius: 4px;
     }
     input[type="submit"] {
       background-color: #007acc;
       color: #fff;
-      padding: 10px 20px;
+      padding: 12px 20px;
       border: none;
       border-radius: 4px;
       cursor: pointer;
@@ -55,15 +56,17 @@
   <input type="hidden" name="orgid" value="00D5g00000L8VqO">
   <input type="hidden" name="retURL" value="http://">
 
+  <h2>Contact Us</h2>
+
   <label for="name">Contact Name</label>
   <input id="name" maxlength="80" name="name" type="text" required>
 
   <label for="state">State</label>
   <select id="00N5g00000dVRwd" name="00N5g00000dVRwd" title="State">
-    <option value="">--None--</option>
-    <option value="DC">DC</option>
-    <option value="VA">VA</option>
-    <option value="MD">MD</option>
+    <option value="">--Select State--</option>
+    <option value="DC">District of Columbia</option>
+    <option value="VA">Virginia</option>
+    <option value="MD">Maryland</option>
   </select>
 
   <label for="email">Email</label>
