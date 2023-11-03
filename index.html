@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us</title>
   <style>
-    /* Add CSS styles here */
     body {
       font-family: Arial, sans-serif;
       background-color: #f7f7f7;
@@ -22,13 +21,16 @@
       padding: 20px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       max-width: 400px;
+      margin: 0 auto;
     }
     h2 {
       text-align: center;
+      color: #007acc;
     }
     label {
       display: block;
       margin-bottom: 8px;
+      font-weight: bold;
     }
     input[type="text"],
     select,
@@ -47,6 +49,7 @@
       border-radius: 4px;
       cursor: pointer;
       transition: background-color 0.3s;
+      width: 100%;
     }
     input[type="submit"]:hover {
       background-color: #0056a4;
@@ -54,36 +57,38 @@
   </style>
 </head>
 <body>
-  <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00D5g00000L8VqO" method="POST">
-    <input type="hidden" name="orgid" value="00D5g00000L8VqO">
-    <input type="hidden" name="retURL" value="http://">
 
-    <h2>Contact Us</h2>
+<form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00D5g00000L8VqO" method="POST">
+  <input type="hidden" name="orgid" value="00D5g00000L8VqO">
+  <input type="hidden" name="retURL" value="http://">
 
-    <label for="name">Contact Name</label>
-    <input id="name" maxlength="80" name="name" type="text" required>
+  <h2>Contact Us</h2>
 
-    <label for="state">State</label>
-    <select id="00N5g00000dVRwd" name="00N5g00000dVRwd" title="State">
-      <option value="">--Select State--</option>
-      <option value="DC">District of Columbia</option>
-      <option value="VA">Virginia</option>
-      <option value="MD">Maryland</option>
-    </select>
+  <label for="name">Contact Name</label>
+  <input id="name" maxlength="80" name="name" type="text" required>
 
-    <label for="email">Email</label>
-    <input id="email" maxlength="80" name="email" type="email" required>
+  <label for="state">State</label>
+  <select id="00N5g00000dVRwd" name="00N5g00000dVRwd" title="State">
+    <option value="">--Select State--</option>
+    <option value="DC">District of Columbia</option>
+    <option value="VA">Virginia</option>
+    <option value="MD">Maryland</option>
+  </select>
 
-    <label for="phone">Phone</label>
-    <input id="phone" maxlength="40" name="phone" type="tel">
+  <label for="email">Email</label>
+  <input id="email" maxlength="80" name="email" type="email" required>
 
-    <label for="subject">Subject</label>
-    <input id="subject" maxlength="80" name="subject" type="text" required>
+  <label for="phone">Phone</label>
+  <input id="phone" maxlength="40" name="phone" type="tel">
 
-    <label for="description">Description</label>
-    <textarea name="description" required></textarea>
+  <label for="subject">Subject</label>
+  <input id="subject" maxlength="80" name="subject" type="text" required>
 
-    <input type="submit" name="submit" value="Submit">
-  </form>
+  <label for="description">Description</label>
+  <textarea name="description" required></textarea>
+
+  <input type="submit" name="submit" value="Submit">
+</form>
+
 </body>
 </html>
