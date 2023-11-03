@@ -22,19 +22,31 @@
       padding: 20px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       max-width: 400px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
     }
     label {
       display: block;
       margin-bottom: 8px;
+      text-align: left;
+      font-weight: bold;
     }
     input[type="text"],
     select,
+    input[type="email"],
+    input[type="tel"],
     textarea {
       width: 100%;
       padding: 10px;
       margin-bottom: 15px;
       border: 1px solid #ccc;
       border-radius: 4px;
+    }
+    select {
+      height: 40px;
     }
     input[type="submit"] {
       background-color: #007acc;
@@ -58,7 +70,7 @@
 
   <h2>Contact Us</h2>
 
-  <label for="name">Contact Name</label>
+  <label for="name">Your Name</label>
   <input id="name" maxlength="80" name="name" type="text" required>
 
   <label for="state">State</label>
